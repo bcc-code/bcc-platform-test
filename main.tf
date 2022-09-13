@@ -21,7 +21,7 @@ provider "azurerm" {
   features {}
 }
 
-resource "azurerm_resource_group" "rg" {
-  name     = "terraform-resource-group"
+resource "azurerm_resource_group" "rg2" {
+  name     = "a-terraform-resource-group"
   location = "North Europe"
 }
