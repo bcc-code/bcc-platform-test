@@ -8,13 +8,6 @@ terraform {
       name = "bcc-platform-test"
     }
   }
-  #backend "remote" {
-  #  organization = "what"
-
-  #   workspaces {
-  #     name = "bcc-platform-test"
-  #   }
-  # }
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
