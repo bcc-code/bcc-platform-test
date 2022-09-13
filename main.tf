@@ -5,16 +5,16 @@ terraform {
     organization = "what"
 
     workspaces {
-      tags = ["networking"]
-    }
-  }
-  backend "remote" {
-    organization = "what"
-
-    workspaces {
       name = "bcc-platform-test"
     }
   }
+  #backend "remote" {
+  #  organization = "what"
+
+  #   workspaces {
+  #     name = "bcc-platform-test"
+  #   }
+  # }
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
