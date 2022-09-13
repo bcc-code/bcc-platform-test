@@ -1,2 +1,2 @@
 # bcc-platform-test **
-***
+test
