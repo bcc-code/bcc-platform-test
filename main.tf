@@ -21,7 +21,14 @@ provider "azurerm" {
   features {}
 }
 
-resource "azurerm_resource_group" "rg2" {
-  name     = "a-terraform-resource-group"
-  location = "North Europe"
+module "module" {
+  source  = "app.terraform.io/what/module/Test"
+  version = "1.1.2"
+  resource_group_name = "a-terraform-resource-group"
+  resource_name = "trg"
 }
+
+# resource "azurerm_resource_group" "rg2" {
+#   name     = "a-terraform-resource-group"
+#   location = "North Europe"
+# }
