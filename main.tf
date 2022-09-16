@@ -23,10 +23,9 @@ provider "azurerm" {
 
 module "module" {
   source  = "app.terraform.io/what/module/test"
-  version = "1.1.5"
+  version = "1.2.0"
 
   resource_group_name = "a-terraform-resource-group"
-  resource_name = "trg"
 }
 
 # resource "azurerm_resource_group" "rg2" {
