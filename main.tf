@@ -23,7 +23,7 @@ provider "azurerm" {
 
 module "module" {
   source  = "app.terraform.io/what/module/test"
-  version = "1.1.3"
+  version = "1.1.5"
 
   resource_group_name = "a-terraform-resource-group"
   resource_name = "trg"
