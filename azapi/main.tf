@@ -4,7 +4,7 @@ terraform {
     azapi = {
       source  = "bcc-code/azapi"
     }
-    azuread = {
+    azurerm = {
       source  = "hashicorp/azurerm"
     }
   }
