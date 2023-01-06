@@ -5,7 +5,7 @@ terraform {
       source  = "bcc-code/azapi"
     }
     azuread = {
-      source  = "hashicorp/azuread"
+      source  = "hashicorp/azurerm"
     }
   }
 }
@@ -16,12 +16,12 @@ provider "azurerm" {
   features {}
 }
 
-data "azuread_client_config" "current" {}
+data "azurerm_client_config" "current" {}
 
 resource "azapi_resource" "example107" {
   type      = "Microsoft.Resources/resourceGroups@2021-04-01"
   name      = "registry107"
-  parent_id = "/subscriptions/${data.azuread_client_config.current.subscription_id}"
+  parent_id = "/subscriptions/${data.azurerm_client_config.current.subscription_id}"
   location = "West Europe"
   tags = {
     "key" = "value2"
